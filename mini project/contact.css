@@ -1,0 +1,158 @@
+#navList{
+    list-style: none;        /* isse unordered list me jo dot aate hai yo hat jata hai */
+    display: flex;
+    justify-content: space-between;
+
+}
+.dhaaba_image{
+    margin-left:80px;
+    margin-right: 10px;
+    margin-top:15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+
+    transition: all 0.5s linear 0s;
+}
+.dhaaba_image:hover{
+    transform: scale(1.1);
+}
+#navLogo{
+    font-size: 1.5rem;
+    font-family: cursive;
+    color: rgb(209, 118, 86);
+    margin-top: 15px;
+    margin-left: 20px;
+
+}
+#ok{
+    display: flex;       /* isse daaba ka logo and paragraph (akhilesh da dhaaba) ek line me aa gya hai */
+}
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.navContainer{
+    width: 100vw;
+    height: 130px;
+    /* background-color: rgb(124, 124, 175); */
+    /* background-color: rgb(33, 33, 67); */
+    background-color: rgb(26, 25, 25);
+    
+     
+}
+a{
+    text-decoration: none;    /* isse home,contact,about ke neeche jo underline hai yo hat jayega */ 
+    color:white;
+}
+#navItems{
+    margin-right:30px;
+    
+    font-size:2rem;
+    display: flex;
+    gap:20px              /* isse home,contact,about ke beech me 20px ka space aa jayega */
+}
+#contact{
+    margin-right: 640px;
+    font-size: 4.0rem;
+    color: rgb(232, 123, 83);
+}
+#center{
+    display: flex;
+    margin-top: 25px;
+}
+.container{
+    width: 100vw;
+    height: 530px;
+    /* background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+    background-color: rgb(141, 141, 141);
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+.card{
+    width: 300px;
+    height: 400px;
+    margin-left: 150px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    margin-top: 90px;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+    
+}
+.card h2{
+    font-weight: bold;
+    font-size:1.6rem;
+}
+.card p{
+    font-size: 1.2em;
+}
+img{
+    width:100%;
+    height: 30%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.payment{
+    width:220px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.payment p{
+    color: white;
+    font-weight: bold;
+    font-size: 0.90rem;
+}
+.text_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:13px;
+    text-align: center;
+    width: 75%;
+
+}
+.text_box p{
+    font-size: 0.99rem;
+}
+.footer{
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(26, 25, 25);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding:10px;
+}
+.footer p{
+    margin-top: 10px;
+    font-size: large;
+}
+.box{ 
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    animation: 8s linear 1s infinite alternate none running leftMovement;
+}
+@keyframes leftMovement {
+    from{ 
+        top:0px;
+        left:1190px;
+    }
+    to{
+        top:1305;
+        left:0px;
+    }
+}

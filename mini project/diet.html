@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Diet Chart Generator</title>
+    <link rel="stylesheet" href="diet.css">
+    <script defer src="diet.js"></script>
+    <link rel="icon" href="carrot2.jpg">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="navContainer">
+            <nav>
+                <ul id="navList">
+                    <li>
+                        <div id="ok">
+                        <img src="carrot2.jpg" alt="diet_img" class="dhaaba_image">
+                        <p id="navLogo">eat<br>this<br>much</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="center">
+                            <a href="http://127.0.0.1:5500/diet/about.html">How it Works ?</a>
+                            <a href="#button1">Generate Diet Plan</a>
+                            <a href="#button2">Diet Recipes</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="navItems">
+                            <a href="#our">Team</a>
+                            <a href="file:///C:/Users/varun%20saxena/Desktop/mini%20project/contact.html">Contact</a>
+                            <a href="file:///C:/Users/varun%20saxena/Desktop/mini%20project/about.html">About!</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+    <div class="container">
+        <div class="leftbox"><img src="vegetable3.png" alt="diet_img" id="img"></div>
+        <div class="rightbox">
+            <div id="rightboxtop">
+                <h1 id="green">Get A Customized</h1><br><h1 id="orange">Diet Plan</h1>
+            </div>
+            <div id="rightboxbottom">
+                <p id="paragraph">A customized diet plan is a tailored and personalized approach to nutrition, designed to meet 
+                    an individual's specific dietary needs, health goals, and preferences.<br> This personalized strategy takes into
+                    account factors such as age, gender, weight, height, activity level, and any dietary restrictions or preferences, whether they
+                    be vegetarian or non-vegetarian.By considering
+                    an individual's unique profile, a customized diet plan aims to optimize nutrient intake, promote energy balance.<br> This approach acknowledges that everyone's nutritional
+                    requirements are different, recognizing the importance of tailoring dietary recommendations to suit individual 
+                    lifestyles and goals for a more effective and enjoyable wellness journey.</p>
+                        
+            </div>
+            
+            <div class="calculate">
+
+                <section id="diet-plans">
+                    <h2 id="diet1">Diet Plans</h2>
+                    <p id="paragraph">Explore different types of diet plans tailored to your needs.Please note that individual dietary needs vary,
+                        and consulting with a registered dietitian or nutritionist is recommended for a more accurate and 
+                        personalized plan based on specific health goals and considerations.</p><br><br>
+                    <button onclick="generateDietPlan()" id="button1"><p>Generate Diet Plan</p></button>
+                    <div id="generated-plan"></div>
+                </section>
+
+                <section id="recipes">
+                        <h2 id="diet2">Healthy Recipes</h2>
+                        <p id="paragraph">Try our delicious and nutritious recipes to complement your diet plans.These recipes not 
+                            only tantalize the taste buds but also contribute to a nourishing lifestyle, proving that healthy 
+                            eating can be both delicious and fulfilling.</p>
+                        <button onclick="displayRandomRecipe()" id="button2"><p>Show Diet Recipe</p></button>
+                        <div id="recipe-container"></div>
+                </section>
+            </div>
+        </div>    
+    </div>
+    <section id="Songs">
+        <h2 style="text-align:center;" id="text"><br>Healthy Life-Style Exercises</h2><br><br><p> </p>
+        <table>
+            <tr>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/Ax9B6R-DSeY?si=KzNA2aD6c6tcXAoL" title="YouTube video player" frameborder="200" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/9o0UPuDBM8M?si=6_peTe7YbfoaWqe-" title="YouTube video player" frameborder="200" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/TjzwohzLJgA?si=yXo76ayDerXqB_GW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            </tr>
+            <tr>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/vN25AxvLb0k?si=IH7ncpDIzsBf8t21" title="YouTube video player" frameborder="200" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/50j9-PQp5HU?si=TDZg72CGchKfMP_x" title="YouTube video player" frameborder="200" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+                <td><iframe width="490" height="250" src="https://www.youtube.com/embed/dj03_VDetdw?si=X_qvzIWG9AzrLIFe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            </tr>
+        </table>
+    </section>
+    <div class="test">
+        <div class="testbox1" id="body">
+            <button onclick="bloodtest()" id="button3"><p>Click to Check</br>Blood-Test Disease</p></button>
+            <div id="blood-test"></div>
+        </div>
+        <div class="testbox2"></div>
+    </div>
+    <div style="text-align:center;" class="plan">An Easy-to-Follow 7-Day</div>
+    <div class="tablebg">
+    <div class="table">
+        <table border="20">
+            <thead>
+
+                <th>Days</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Snacks</th>
+                <th>Dinner</th>
+
+            </thead>
+            <body>
+
+                <tr>
+
+                    <th>Day1</th>
+                    <td>Spinach + Moog Dal<br>Papaya</td>
+                    <td>Large garden salad(3 cups mixed greens with 1 cup cherry tomatoes,<br> topped with 2 tablespoons 
+                        balsamic vinaigrette)</td>
+                    <td>Gaazar ka hulwa</td>
+                    <td>One whole wheat english muffin<br>One slice tomato, two leaves lettuce,<br>5-ounce 
+                        turkey burger</td>
+
+                </tr>
+                <tr>
+
+                    <th>Day2</th>
+                    <td>Overnight Oats,butter<br>Apple</td>
+                    <td>Turkey sandwich (6 ounces of turkey breast meat,<br>green lettuce, 1/4 avocado, and 
+                        2 teaspoons honey mustard on two slices of whole wheat bread)</td>
+                    <td>MIxed fruits</td>
+                    <td>Brush 4 ounces boneless, skinless chicken breast<br> and grill. Garnish chicken
+                         with chopped scallions and a squeeze of lime juice. <br>Combine 2 heaping cups of sautéed
+                          spinach with garlic</td>
+
+                </tr>
+                <tr>
+
+                    <th>Day3</th>
+                    <td>1 Seasonal Food<br>Bread + Butter</td>
+                    <td>Tuna wrap with one wheat flour tortilla, 1/2 can water-packed tuna (drained),<br>
+                         lettuce, and sliced tomato</td>
+                    <td>Boiled Eggs</td>
+                    <td>Serve 4 ounces steamed shrimp with 1 baked potato topped with 3 tablespoons <br>salsa 
+                        and 1 tablespoon unsweetened Greek yogurt, plus 3 </td>
+
+                </tr>
+                <tr>
+
+                    <th>Day4</th>
+                    <td>Egg Toast<br>Protein Shake</td>
+                    <td>Build a pita sandwich with 1 mini whole wheat pita<br> breast, 1/2 roasted pepper, 1 teaspoon
+                         mayo<br> Serve with 1 stick part-skim mozzarella string cheese</td>
+                    <td>Bananas</td>
+                    <td>Serve 4 ounces poached salmon with a slaw made by tossing 1 1/4 cups coleslaw<br> mix and 2 sliced scallions 
+                        with 1 tablespoon of rice vinegar.
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <th>Day5</th>
+                    <td>Almond + soya sink</td>
+                    <td>Heat up 1 cup vegetable soup and serve with 1 veggie burger on <br>seed toast
+                         or an English muffin. Pair with 1 cup of fresh grapes.</td>
+                    <td>Apple + Juice</td>
+                    <td>Serve 3 ounces roasted pork tenderloin <br> mashed with a pinch of cinnamon;
+                         2 to 3 cups salad greens<br> vinegar as desired; and chocolate or
+                          a 100- to 150-calorie ice cream bar for dessert.</td>
+
+                </tr>
+                <tr>
+
+                    <th>Day6</th>
+                    <td>Raw paneer patty sandwich,<br>fruits</td>
+                    <td>To make a chicken salad, toss 4 ounces shredded skinless<br> breast with 1/4 cup sliced red 
+                        grapes, 1 tablespoon slivered almonds or nuts of choice, </td>
+                    <td>Shake + Milk</td>
+                    <td>Make a tuna pita with one mini whole-wheat pita, 2 ounces water-packed tuna,<br> 1 tablespoon mayonnaise,
+                         mustard, cucumber and onion slices. <br>Serve with 10 baby carrots<br>unsweetened Greek
+                          yogurt with a small pear.</td>
+
+                </tr>
+                <tr>
+
+                    <th>Day7</th>
+                    <td>Apple Peanut butter<br>Grains+Banana</td>
+                    <td>Heat 1 cup tomato soup and serve<br> whole-wheat pita, 3 ounces thinly 
+                        sliced roast beef, 1 teaspoon horseradish, mustard, tomato</td>
+                    <td>Grilled Chesse Panner</td>
+                    <td>Make jambalaya by combining 3/4 cup cooked brown rice<br> 2 ounces cooked sliced turkey 
+                        sausage, 1/3 cup salsa and 1/4 cup no-salt-added</td>
+
+                </tr>
+
+            </body>
+        </table>
+        </div>
+    </div>
+    <div class="team">
+            <div>
+                <h2 id="our">Our Designer</h2>
+                <p class="team3"> <br>We'd like to extend our heartfelt appreciation to the talented designers and coders behind the "Eat This Much" website. Their creativity, expertise, and attention to detail have brought our vision to life, creating a seamless and engaging user experience. From the intuitive design to the flawless functionality, their hard work and dedication ensure that our users can effortlessly plan and manage their meals. Thank you for your invaluable contribution in making "Eat This Much" not just a tool, but a delightful and inspiring part of our users' daily lives.</p>
+            </div>
+                <div class="team2">
+                
+            <div><img src="shata.jpg" id="nobita"></div>
+               
+               
+            </div>
+           
+            <div class="name">
+                <pre><p>Shatakshi Gupta<br>(1BI22CS153)</p></pre>
+        
+                
+                
+            </div>
+    </div>
+        
+    <div class="container">
+        <div class="box"><br>Help Line Toll-Free Numbers - 91xxxxxxxx</div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>@ All Copyrights Reserved 2023-24.</p>
+            <p>This web site is designed and developed by : Computer Science Engineers<br>
+                Last Reviewed and Updated :11/10/2024 </p>
+            <audio controls autoplay src="" class="audio"></audio>   
+        </div>
+    </footer>
+    
+</body>
+</html>
